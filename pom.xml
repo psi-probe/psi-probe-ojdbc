@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Licensed under the GPL License. You may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+      https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+
+    THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING,
+    WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR
+    PURPOSE.
+
+-->
+<project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.github.hazendaz</groupId>
+        <artifactId>base-parent</artifactId>
+        <version>12</version>
+        <relativePath />
+    </parent>
+
+    <groupId>com.github.psi-probe</groupId>
+    <artifactId>psi-probe-ojdbc</artifactId>
+    <version>3.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>psi-probe-ojdbc</name>
+    <description>
+        PSI Probe Ojdbc - License Restricted Oracle JDBC Driver Module
+    </description>
+    <url>https://github.com/psi-probe/psi-probe-ojdbc/</url>
+    <inceptionYear>2009</inceptionYear>
+    <organization>
+        <name>psi-probe</name>
+        <url>https://github.com/psi-probe/</url>
+    </organization>
+    <licenses>
+        <license>
+            <name>GNU General Public License, version 2</name>
+            <url>https://www.gnu.org/licenses/old-licenses/gpl-2.0.html</url>
+            <distribution>manual</distribution>
+        </license>
+    </licenses>
+
+    <mailingLists>
+        <mailingList>
+            <name>PSI Probe Announcements</name>
+            <subscribe>psi-probe+subscribe@googlegroups.com</subscribe>
+            <unsubscribe>psi-probe+unsubscribe@googlegroups.com</unsubscribe>
+            <archive>https://groups.google.com/forum/#!forum/psi-probe</archive>
+        </mailingList>
+        <mailingList>
+            <name>PSI Probe Discussions</name>
+            <subscribe>psi-probe-discuss+subscribe@googlegroups.com</subscribe>
+            <unsubscribe>psi-probe-discuss+unsubscribe@googlegroups.com</unsubscribe>
+            <post>psi-probe-discuss@googlegroups.com</post>
+            <archive>https://groups.google.com/forum/#!forum/psi-probe-discuss</archive>
+        </mailingList>
+    </mailingLists>
+
+    <scm>
+        <connection>scm:git:ssh://git@github.com/psi-probe/psi-probe-ojdbc.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/psi-probe/psi-probe-ojdbc.git</developerConnection>
+        <url>https://github.com/psi-probe/psi-probe-ojdbc/</url>
+    </scm>
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>https://github.com/psi-probe/psi-probe-ojdbc/issues/</url>
+    </issueManagement>
+    <ciManagement>
+        <system>Travis</system>
+        <url>https://travis-ci.org/psi-probe/psi-probe-ojdbc/</url>
+    </ciManagement>
+    <distributionManagement>
+        <site>
+            <id>gh-pages</id>
+            <name>Psi-Probe-Ojdbc GitHub Pages</name>
+            <url>github:https://psi-probe.github.io/psi-probe-ojdbc/</url>
+        </site>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
+
+    <properties>
+        <c3p0.version>0.9.5.2</c3p0.version>
+        <javabean-tester.version>1.4.2</javabean-tester.version>
+        <jmockit.version>1.31</jmockit.version>
+        <junit.version>4.12</junit.version>
+        <ojdbc.version>12.1.0.2</ojdbc.version>
+        <servlet.version>3.1.0</servlet.version>
+
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+        <maven.compiler.testSource>1.7</maven.compiler.testSource>
+        <maven.compiler.testTarget>1.7</maven.compiler.testTarget>
+
+        <signature.artifact>java17</signature.artifact>
+    </properties>
+
+    <repositories>
+        <repository>
+            <!-- Required for ojdbc7 and ucp -->
+            <id>maven.oracle.com</id>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <url>https://maven.oracle.com</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${servlet.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.oracle.jdbc</groupId>
+            <artifactId>ucp</artifactId>
+            <version>${ojdbc.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.oracle.jdbc</groupId>
+            <artifactId>ojdbc7</artifactId>
+            <version>${ojdbc.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jmockit</groupId>
+            <artifactId>jmockit</artifactId>
+            <version>${jmockit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.hazendaz</groupId>
+            <artifactId>javabean-tester</artifactId>
+            <version>${javabean-tester.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.mchange</groupId>
+            <artifactId>c3p0</artifactId>
+            <version>${c3p0.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>

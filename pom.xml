@@ -97,6 +97,7 @@
         <junit.version>4.12</junit.version>
         <ojdbc.version>12.1.0.2</ojdbc.version>
         <servlet.version>3.1.0</servlet.version>
+        <ucp.version>12.2.0.1</ucp.version>
 
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
@@ -131,7 +132,7 @@
         <dependency>
             <groupId>com.oracle.jdbc</groupId>
             <artifactId>ucp</artifactId>
-            <version>${ojdbc.version}</version>
+            <version>${ucp.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

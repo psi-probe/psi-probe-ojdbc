@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>OracleDatasourceAccessor.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">psi-probe-ojdbc</a> &gt; <a href="index.source.html" class="el_package">psiprobe.beans.accessors</a> &gt; <span class="el_source">OracleDatasourceAccessor.java</span></div><h1>OracleDatasourceAccessor.java</h1><pre class="source lang-java linenums">/**
+ * Licensed under the GPL License. You may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ *
+ * THIS PACKAGE IS PROVIDED &quot;AS IS&quot; AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING,
+ * WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE.
+ */
+package psiprobe.beans.accessors;
+
+import oracle.jdbc.pool.OracleConnectionCacheManager;
+import oracle.jdbc.pool.OracleDataSource;
+import psiprobe.UtilsBase;
+import psiprobe.model.DataSourceInfo;
+
+import java.util.Properties;
+
+/**
+ * Accesses oracle.jdbc.pool.OracleDataSource.
+ *
+ * &lt;p&gt;
+ * Oracle connection pool is quite different from any other available for Tomcat. Datasources are
+ * run by static OracleConnectionCacheManager, whereby application context scope datasource would
+ * have a named entry in OracleConnectionCacheManager.
+ * &lt;/p&gt;
+ * 
+ * &lt;p&gt;
+ * Datasources do not have information about pool as such, therefore this accessor has to do quite
+ * tedious job of verifying whether the datasource has a record in the cache manager or not. The
+ * pool information is subsequently retrieved from the relevant cache manager entry.
+ * &lt;/p&gt;
+ */
+<span class="fc" id="L35">public class OracleDatasourceAccessor implements DatasourceAccessor {</span>
+
+  @Override
+  public DataSourceInfo getInfo(Object resource) throws Exception {
+<span class="fc" id="L39">    DataSourceInfo dataSourceInfo = null;</span>
+
+<span class="pc bpc" id="L41" title="1 of 2 branches missed.">    if (canMap(resource)) {</span>
+<span class="fc" id="L42">      OracleDataSource source = (OracleDataSource) resource;</span>
+      OracleConnectionCacheManager occm =
+<span class="fc" id="L44">          OracleConnectionCacheManager.getConnectionCacheManagerInstance();</span>
+<span class="fc" id="L45">      Properties cacheProperties = source.getConnectionCacheProperties();</span>
+<span class="fc" id="L46">      String cacheName = source.getConnectionCacheName();</span>
+<span class="pc bpc" id="L47" title="3 of 4 branches missed.">      cacheName = cacheName != null &amp;&amp; occm.existsCache(cacheName) ? cacheName : null;</span>
+
+<span class="pc bpc" id="L49" title="1 of 2 branches missed.">      if (cacheProperties != null) {</span>
+
+<span class="fc" id="L51">        dataSourceInfo = new DataSourceInfo();</span>
+<span class="pc bpc" id="L52" title="1 of 2 branches missed.">        if (cacheName != null) {</span>
+<span class="nc" id="L53">          dataSourceInfo.setBusyConnections(occm.getNumberOfActiveConnections(cacheName));</span>
+<span class="nc" id="L54">          dataSourceInfo.setEstablishedConnections(occm.getNumberOfAvailableConnections(cacheName)</span>
+<span class="nc" id="L55">              + dataSourceInfo.getBusyConnections());</span>
+        } else {
+<span class="fc" id="L57">          dataSourceInfo.setBusyConnections(0);</span>
+<span class="fc" id="L58">          dataSourceInfo.setEstablishedConnections(0);</span>
+        }
+
+<span class="fc" id="L61">        dataSourceInfo.setMaxConnections(UtilsBase.toInt(cacheProperties.getProperty(&quot;MaxLimit&quot;), -1));</span>
+<span class="fc" id="L62">        dataSourceInfo.setJdbcUrl(source.getURL());</span>
+<span class="fc" id="L63">        dataSourceInfo.setUsername(source.getUser());</span>
+<span class="fc" id="L64">        dataSourceInfo.setResettable(true);</span>
+<span class="fc" id="L65">        dataSourceInfo.setType(&quot;oracle-jdbc&quot;);</span>
+      }
+    }
+<span class="fc" id="L68">    return dataSourceInfo;</span>
+  }
+
+  @Override
+  public boolean reset(Object resource) throws Exception {
+<span class="nc bnc" id="L73" title="All 2 branches missed.">    if (canMap(resource)) {</span>
+<span class="nc" id="L74">      ((OracleDataSource) resource).close();</span>
+<span class="nc" id="L75">      return true;</span>
+    }
+<span class="nc" id="L77">    return false;</span>
+  }
+
+  @Override
+  public boolean canMap(Object resource) {
+<span class="pc bpc" id="L82" title="1 of 4 branches missed.">    return &quot;oracle.jdbc.pool.OracleDataSource&quot;.equals(resource.getClass().getName())</span>
+        &amp;&amp; resource instanceof OracleDataSource;
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

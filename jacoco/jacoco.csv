@@ -1,0 +1,5 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+psi-probe-ojdbc,psiprobe,UtilsBase,38,51,8,12,0,9,6,7,0,3
+psi-probe-ojdbc,psiprobe.beans.accessors,OracleUcpDatasourceAccessor,11,66,3,7,3,17,4,5,1,3
+psi-probe-ojdbc,psiprobe.beans.accessors,OracleDatasourceAccessor,31,74,9,7,7,20,8,4,1,3
+psi-probe-ojdbc,psiprobe.model,DataSourceInfo,0,64,0,0,0,24,0,17,0,17

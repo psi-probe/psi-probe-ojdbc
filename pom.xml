@@ -64,8 +64,8 @@
         <connection>scm:git:ssh://git@github.com/psi-probe/psi-probe-ojdbc.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/psi-probe/psi-probe-ojdbc.git</developerConnection>
         <url>https://github.com/psi-probe/psi-probe-ojdbc/</url>
-      <tag>HEAD</tag>
-  </scm>
+        <tag>HEAD</tag>
+    </scm>
     <issueManagement>
         <system>GitHub Issues</system>
         <url>https://github.com/psi-probe/psi-probe-ojdbc/issues/</url>

@@ -17,7 +17,7 @@
     <parent>
         <groupId>com.github.hazendaz</groupId>
         <artifactId>base-parent</artifactId>
-        <version>12</version>
+        <version>16</version>
         <relativePath />
     </parent>
 
@@ -92,11 +92,11 @@
 
     <properties>
         <c3p0.version>0.9.5.2</c3p0.version>
-        <javabean-tester.version>1.4.2</javabean-tester.version>
-        <jmockit.version>1.31</jmockit.version>
-        <junit.version>4.12</junit.version>
-        <ojdbc.version>12.1.0.2</ojdbc.version>
-        <servlet.version>4.0.0-b05</servlet.version>
+        <javabean-tester.version>2.0.0-beta3</javabean-tester.version>
+        <jmockit.version>1.39</jmockit.version>
+        <junit.version>4.12.3</junit.version>
+        <ojdbc.version>12.2.0.1</ojdbc.version>
+        <servlet.version>4.0.1</servlet.version>
         <ucp.version>12.2.0.1</ucp.version>
 
         <maven.compiler.source>1.7</maven.compiler.source>
@@ -109,7 +109,7 @@
 
     <repositories>
         <repository>
-            <!-- Required for ojdbc7 and ucp -->
+            <!-- Required for ojdbc8 and ucp -->
             <id>maven.oracle.com</id>
             <releases>
                 <enabled>true</enabled>
@@ -137,7 +137,7 @@
         </dependency>
         <dependency>
             <groupId>com.oracle.jdbc</groupId>
-            <artifactId>ojdbc7</artifactId>
+            <artifactId>ojdbc8</artifactId>
             <version>${ojdbc.version}</version>
             <scope>provided</scope>
         </dependency>
@@ -149,8 +149,8 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
+            <groupId>org.junit.vintage</groupId>
+            <artifactId>junit-vintage-engine</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>

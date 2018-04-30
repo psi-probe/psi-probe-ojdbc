@@ -15,11 +15,11 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.oracle.jdbc</groupId>
-    <artifactId>ojdbc7</artifactId>
-    <version>12.1.0.2</version>
+    <artifactId>ojdbc8</artifactId>
+    <version>12.2.0.1</version>
     <packaging>jar</packaging>
     <name>Oracle Database 12c Release 1 JDBC Driver</name>
-    <url>http://download.oracle.com/otn/utilities_drivers/jdbc/121020/ojdbc7.jar</url>
+    <url>http://download.oracle.com/otn/utilities_drivers/jdbc/122010/ojdbc8.jar</url>
     <licenses>
         <license>
             <name>Oracle Technology Network Development and Distribution License</name>

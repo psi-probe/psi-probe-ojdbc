@@ -10,8 +10,8 @@
  */
 package psiprobe.model;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import com.codebox.bean.JavaBeanTester;
 
@@ -36,7 +36,7 @@ public class DataSourceInfoTest {
       final DataSourceInfo dataSourceInfo = new DataSourceInfo();
       dataSourceInfo.setBusyConnections(1);
       dataSourceInfo.setMaxConnections(5);
-      Assert.assertEquals(20, dataSourceInfo.getBusyScore());
+      Assertions.assertEquals(20, dataSourceInfo.getBusyScore());
   }
 
   /**
@@ -47,7 +47,7 @@ public class DataSourceInfoTest {
       final DataSourceInfo dataSourceInfo = new DataSourceInfo();
       dataSourceInfo.setEstablishedConnections(1);
       dataSourceInfo.setMaxConnections(5);
-      Assert.assertEquals(20, dataSourceInfo.getEstablishedScore());
+      Assertions.assertEquals(20, dataSourceInfo.getEstablishedScore());
   }
 
 }

@@ -13,9 +13,9 @@ package psiprobe.beans.accessors;
 import java.sql.SQLException;
 import java.util.Properties;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
@@ -43,7 +43,7 @@ public class OracleDatasourceAccessorTest {
      *
      * @throws SQLException the SQL exception
      */
-    @Before
+    @BeforeEach
     public void before() throws SQLException {
         accessor = new OracleDatasourceAccessor();
         badSource = new ComboPooledDataSource();
@@ -54,7 +54,7 @@ public class OracleDatasourceAccessorTest {
      */
     @Test
     public void canMapTest() {
-        Assert.assertTrue(accessor.canMap(source));
+        Assertions.assertTrue(accessor.canMap(source));
     }
 
     /**
@@ -62,7 +62,7 @@ public class OracleDatasourceAccessorTest {
      */
     @Test
     public void cannotMapTest() {
-        Assert.assertFalse(accessor.canMap(badSource));
+        Assertions.assertFalse(accessor.canMap(badSource));
     }
 
     /**

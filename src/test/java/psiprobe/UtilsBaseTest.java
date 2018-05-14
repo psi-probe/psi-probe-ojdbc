@@ -10,8 +10,8 @@
  */
 package psiprobe;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import com.codebox.bean.JavaBeanTester;
 
@@ -25,8 +25,8 @@ public class UtilsBaseTest {
    */
   @Test
   public void calcPoolUsageScoreTest() {
-    Assert.assertEquals(100, UtilsBase.calcPoolUsageScore(5, 5));
-    Assert.assertEquals(0, UtilsBase.calcPoolUsageScore(0, 5));
+    Assertions.assertEquals(100, UtilsBase.calcPoolUsageScore(5, 5));
+    Assertions.assertEquals(0, UtilsBase.calcPoolUsageScore(0, 5));
   }
 
   /**
@@ -34,10 +34,10 @@ public class UtilsBaseTest {
    */
   @Test
   public void toIntTest() {
-    Assert.assertEquals(5, UtilsBase.toInt("garbage", 5));
-    Assert.assertEquals(3, UtilsBase.toInt("3", 5));
-    Assert.assertEquals(5, UtilsBase.toInt("3 3", 5));
-    Assert.assertEquals(5, UtilsBase.toInt((String) null, 5)); 
+    Assertions.assertEquals(5, UtilsBase.toInt("garbage", 5));
+    Assertions.assertEquals(3, UtilsBase.toInt("3", 5));
+    Assertions.assertEquals(5, UtilsBase.toInt("3 3", 5));
+    Assertions.assertEquals(5, UtilsBase.toInt((String) null, 5)); 
   }
 
   /**

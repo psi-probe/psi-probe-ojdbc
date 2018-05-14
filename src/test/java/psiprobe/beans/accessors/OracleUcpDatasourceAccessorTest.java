@@ -10,9 +10,9 @@
  */
 package psiprobe.beans.accessors;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
@@ -38,7 +38,7 @@ public class OracleUcpDatasourceAccessorTest {
     /**
      * Before.
      */
-    @Before
+    @BeforeEach
     public void before() {
         accessor = new OracleUcpDatasourceAccessor();
         source = new PoolDataSourceImpl();
@@ -51,7 +51,7 @@ public class OracleUcpDatasourceAccessorTest {
      */
     @Test
     public void canMapTest() {
-        Assert.assertTrue(accessor.canMap(source));
+        Assertions.assertTrue(accessor.canMap(source));
     }
 
     /**
@@ -59,7 +59,7 @@ public class OracleUcpDatasourceAccessorTest {
      */
     @Test
     public void canMapXATest() {
-        Assert.assertTrue(accessor.canMap(xaSource));
+        Assertions.assertTrue(accessor.canMap(xaSource));
     }
 
     /**
@@ -67,7 +67,7 @@ public class OracleUcpDatasourceAccessorTest {
      */
     @Test
     public void cannotMapTest() {
-        Assert.assertFalse(accessor.canMap(badSource));
+        Assertions.assertFalse(accessor.canMap(badSource));
     }
 
     /**

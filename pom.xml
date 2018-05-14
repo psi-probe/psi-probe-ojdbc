@@ -17,7 +17,7 @@
     <parent>
         <groupId>com.github.hazendaz</groupId>
         <artifactId>base-parent</artifactId>
-        <version>16</version>
+        <version>17</version>
         <relativePath />
     </parent>
 
@@ -168,19 +168,4 @@
         </dependency>
     </dependencies>
 
-    <!-- Temporary until base-parent handles this -->
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-release-plugin</artifactId>
-                    <version>2.5.3</version>
-                    <configuration>
-                        <addSchema>false</addSchema>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
 </project>

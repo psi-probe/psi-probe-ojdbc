@@ -35,7 +35,7 @@ env:
 
 before_install:
   - wget https://raw.githubusercontent.com/sormuras/bach/master/install-jdk.sh
-  - ./mvnw install -q -DskipTests=true
+  - ./mvnw install -q -DskipTests=true --settings ./travis/settings.xml
     
 install: true
 

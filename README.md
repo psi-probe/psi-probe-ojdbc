@@ -17,7 +17,7 @@ Follow instructions located [here](http://www.oracle.com/webfolder/application/m
 
     Retrieve ojdbc and ucp from location noted in following poms and then Execute the following commands:
 
-        - mvn install:install-file -Dfile=/path/to/ojdbc7.jar -DpomFile=/path/to/ojdbc7-pom.xml
+        - mvn install:install-file -Dfile=/path/to/ojdbc8.jar -DpomFile=/path/to/ojdbc8-pom.xml
         - mvn install:install-file -Dfile=/path/to/ucp.jar -DpomFile=/path/to/ucp-pom.xml
 
 [notes]

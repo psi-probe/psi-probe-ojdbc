@@ -92,9 +92,9 @@
 
     <properties>
         <c3p0.version>0.9.5.2</c3p0.version>
-        <jmockit.version>1.39</jmockit.version>
         <junit.version>5.2.0</junit.version>
         <javabean-tester.version>2.0.0</javabean-tester.version>
+        <jmockit.version>1.41</jmockit.version> <!-- TODO: 42 breaks -->
         <ojdbc.version>12.2.0.1</ojdbc.version>
         <servlet.version>4.0.1</servlet.version>
         <ucp.version>12.2.0.1</ucp.version>

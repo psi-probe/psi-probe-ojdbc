@@ -19,7 +19,7 @@
     <version>12.2.0.1</version>
     <packaging>jar</packaging>
     <name>Oracle Database Universal Connection Pool</name>
-    <url>http://download.oracle.com/otn/utilities_drivers/jdbc/121020/ucp.jar</url>
+    <url>http://download.oracle.com/otn/utilities_drivers/jdbc/183/ucp.jar</url>
     <licenses>
         <license>
             <name>Oracle Technology Network Development and Distribution License</name>

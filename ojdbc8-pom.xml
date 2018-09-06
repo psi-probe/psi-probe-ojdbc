@@ -19,7 +19,7 @@
     <version>12.2.0.1</version>
     <packaging>jar</packaging>
     <name>Oracle Database 12c Release 1 JDBC Driver</name>
-    <url>http://download.oracle.com/otn/utilities_drivers/jdbc/122010/ojdbc8.jar</url>
+    <url>http://download.oracle.com/otn/utilities_drivers/jdbc/183/ojdbc8.jar</url>
     <licenses>
         <license>
             <name>Oracle Technology Network Development and Distribution License</name>

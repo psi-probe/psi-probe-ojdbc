@@ -91,7 +91,7 @@
     </distributionManagement>
 
     <properties>
-        <c3p0.version>0.9.5.2</c3p0.version>
+        <c3p0.version>0.9.5.3</c3p0.version>
         <javabean-tester.version>2.1.1</javabean-tester.version>
         <jmockit.version>1.44</jmockit.version>
         <junit.version>5.3.2</junit.version>

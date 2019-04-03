@@ -96,7 +96,7 @@
         <jmockit.version>1.44</jmockit.version>
         <junit.version>5.3.2</junit.version>
         <ojdbc.version>18.3.0.0</ojdbc.version>
-        <servlet.version>4.0.1</servlet.version>
+        <servlet.version>4.0.2</servlet.version>
         <ucp.version>18.3.0.0</ucp.version>
 
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -126,8 +126,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
             <version>${servlet.version}</version>
             <scope>provided</scope>
         </dependency>

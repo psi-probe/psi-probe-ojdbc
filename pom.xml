@@ -23,7 +23,7 @@
 
     <groupId>com.github.psi-probe</groupId>
     <artifactId>psi-probe-ojdbc</artifactId>
-    <version>3.1.1-SNAPSHOT</version>
+    <version>3.1.1</version>
     <packaging>jar</packaging>
 
     <name>psi-probe-ojdbc</name>
@@ -64,7 +64,7 @@
         <connection>scm:git:ssh://git@github.com/psi-probe/psi-probe-ojdbc.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/psi-probe/psi-probe-ojdbc.git</developerConnection>
         <url>https://github.com/psi-probe/psi-probe-ojdbc/</url>
-        <tag>HEAD</tag>
+        <tag>psi-probe-ojdbc-3.1.1</tag>
     </scm>
     <issueManagement>
         <system>GitHub Issues</system>

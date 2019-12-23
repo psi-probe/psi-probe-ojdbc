@@ -20,9 +20,9 @@ public class UtilsBase {
   /**
    * Prevent Instantiation.
    */
-<span class="fc" id="L23">  private UtilsBase() {</span>
+  private UtilsBase() {
     // Prevent Instantiation
-<span class="fc" id="L25">  }</span>
+  }
 
   /**
    * Calc pool usage score.
@@ -44,14 +44,14 @@ public class UtilsBase {
    */
   public static int toInt(String num, int defaultValue) {
 <span class="fc bfc" id="L46" title="All 4 branches covered.">    if (num != null &amp;&amp; !num.contains(&quot; &quot;)) {</span>
-<span class="pc" id="L47">      try (Scanner scanner = new Scanner(num)) {</span>
+<span class="fc" id="L47">      try (Scanner scanner = new Scanner(num)) {</span>
 <span class="fc bfc" id="L48" title="All 2 branches covered.">        if (scanner.hasNextInt()) {</span>
 <span class="fc" id="L49">          return Integer.parseInt(num);</span>
         }
-<span class="pc bpc" id="L51" title="8 of 12 branches missed.">      }</span>
+<span class="fc" id="L51">      }</span>
     }
 <span class="fc" id="L53">    return defaultValue;</span>
   }
 
 }
-</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>

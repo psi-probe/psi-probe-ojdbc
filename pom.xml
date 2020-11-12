@@ -91,13 +91,12 @@
     </distributionManagement>
 
     <properties>
+        <!-- Dependencies -->
         <c3p0.version>0.9.5.5</c3p0.version>
         <javabean-tester.version>2.2.0</javabean-tester.version>
         <jmockit.version>1.48</jmockit.version>
         <junit.version>5.5.2</junit.version>
-        <ojdbc.version>19.3.0.0</ojdbc.version>
         <servlet.version>4.0.3</servlet.version>
-        <ucp.version>19.3.0.0</ucp.version>
 
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -110,22 +109,9 @@
 
         <!-- Downgrade jacoco to 0.8.3 until jmockit supports condy -->
         <jacoco.plugin>0.8.3</jacoco.plugin>
+        <ojdbc.version>19.8.0.0</ojdbc.version>
+        <ucp.version>19.8.0.0</ucp.version>
     </properties>
-
-    <repositories>
-        <repository>
-            <!-- Required for ojdbc8 and ucp -->
-            <id>maven.oracle.com</id>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <url>https://maven.oracle.com</url>
-            <layout>default</layout>
-        </repository>
-    </repositories>
 
     <dependencies>
         <dependency>
@@ -135,7 +121,7 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.oracle.jdbc</groupId>
+            <groupId>com.oracle.database.jdbc</groupId>
             <artifactId>ucp</artifactId>
             <version>${ucp.version}</version>
             <scope>provided</scope>
@@ -147,7 +133,7 @@
             </exclusions>
         </dependency>
         <dependency>
-            <groupId>com.oracle.jdbc</groupId>
+            <groupId>com.oracle.database.jdbc</groupId>
             <artifactId>ojdbc8</artifactId>
             <version>${ojdbc.version}</version>
             <scope>provided</scope>

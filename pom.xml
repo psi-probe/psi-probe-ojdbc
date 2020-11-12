@@ -84,7 +84,6 @@
     <properties>
         <!-- Dependencies -->
         <c3p0.version>0.9.5.5</c3p0.version>
-        <jmockit.version>1.48</jmockit.version>
         <junit.version>5.5.2</junit.version>
         <servlet.version>4.0.3</servlet.version>
 
@@ -95,13 +94,13 @@
 
         <signature.artifact>java18</signature.artifact>
 
-        <argLine>-javaagent:${settings.localRepository}/org/jmockit/jmockit/${jmockit.version}/jmockit-${jmockit.version}.jar -Djdk.attach.allowAttachSelf</argLine>
-
-        <!-- Downgrade jacoco to 0.8.3 until jmockit supports condy -->
-        <jacoco.plugin>0.8.3</jacoco.plugin>
         <javabean-tester.version>2.3.0</javabean-tester.version>
+        <jmockit.version>1.49.1</jmockit.version>
         <ojdbc.version>19.8.0.0</ojdbc.version>
         <ucp.version>19.8.0.0</ucp.version>
+
+        <!-- Surefire argLine -->
+        <argLine>-javaagent:${settings.localRepository}/com/github/hazendaz/jmockit/jmockit/${jmockit.version}/jmockit-${jmockit.version}.jar -Djdk.attach.allowAttachSelf</argLine>
     </properties>
 
     <dependencies>
@@ -131,7 +130,7 @@
         </dependency>
 
         <dependency>
-            <groupId>org.jmockit</groupId>
+            <groupId>com.github.hazendaz.jmockit</groupId>
             <artifactId>jmockit</artifactId>
             <version>${jmockit.version}</version>
             <scope>test</scope>

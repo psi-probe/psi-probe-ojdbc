@@ -87,9 +87,9 @@
         <javabean-tester.version>2.3.1</javabean-tester.version>
         <jmockit.version>1.49.1</jmockit.version>
         <junit.version>5.7.1</junit.version>
-        <ojdbc.version>19.10.0.0</ojdbc.version>
+        <ojdbc.version>19.11.0.0</ojdbc.version>
         <servlet.version>4.0.4</servlet.version>
-        <ucp.version>19.10.0.0</ucp.version>
+        <ucp.version>19.11.0.0</ucp.version>
 
         <!-- Surefire argLine -->
         <argLine>-javaagent:${settings.localRepository}/com/github/hazendaz/jmockit/jmockit/${jmockit.version}/jmockit-${jmockit.version}.jar -Djdk.attach.allowAttachSelf</argLine>

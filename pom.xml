@@ -84,10 +84,10 @@
     <properties>
         <!-- Dependencies -->
         <c3p0.version>0.9.5.5</c3p0.version>
-        <ojdbc.version>19.11.0.0</ojdbc.version>
         <javabean-tester.version>2.4.2</javabean-tester.version>
         <jmockit.version>1.49.2</jmockit.version>
         <junit.version>5.8.2</junit.version>
+        <ojdbc.version>19.13.0.0.1</ojdbc.version>
         <servlet.version>4.0.4</servlet.version>
         <ucp.version>19.11.0.0</ucp.version>
 

@@ -70,8 +70,8 @@
         <url>https://github.com/psi-probe/psi-probe-ojdbc/issues/</url>
     </issueManagement>
     <ciManagement>
-        <system>Travis</system>
-        <url>https://travis-ci.org/psi-probe/psi-probe-ojdbc/</url>
+        <system>GitHub Actions</system>
+        <url>https://github.com/psi-probe/psi-probe-ojdbc/actions/</url>
     </ciManagement>
     <distributionManagement>
         <site>

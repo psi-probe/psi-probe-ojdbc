@@ -1,4 +1,3 @@
-#!/bin/bash
 #
 # Licensed under the GPL License. You may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -10,5 +9,20 @@
 # PURPOSE.
 #
 
-# Standard Build
-./mvnw install -B -V --settings ./travis/settings.xml
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: com.oracle.database.jdbc:ojdbc8
+    versions:
+    - ">= 21.1.0.0"
+  - dependency-name: com.oracle.database.jdbc:ucp
+    versions:
+    - ">= 21.1.0.0"
+  - dependency-name: jakarta.servlet:jakarta.servlet-api
+    versions:
+    - ">= 5.0.0"

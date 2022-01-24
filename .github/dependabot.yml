@@ -16,3 +16,13 @@ updates:
   schedule:
     interval: daily
   open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: com.olrbacle.database.jdbc:ojdbc8
+    versions:
+    - ">= 21.1.0.0"
+  - dependency-name: com.olrbacle.database.jdbc:ucp
+    versions:
+    - ">= 21.1.0.0"
+  - dependency-name: jakarta.servlet:jakarta.servlet-api
+    versions:
+    - ">= 5.0.0"

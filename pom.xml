@@ -89,7 +89,7 @@
         <junit.version>5.9.1</junit.version>
         <ojdbc.version>19.16.0.0</ojdbc.version>
         <servlet.version>4.0.4</servlet.version>
-        <ucp.version>19.16.0.0</ucp.version>
+        <ucp.version>19.17.0.0</ucp.version>
 
         <!-- Surefire argLine -->
         <argLine>-javaagent:${settings.localRepository}/com/github/hazendaz/jmockit/jmockit/${jmockit.version}/jmockit-${jmockit.version}.jar -Djdk.attach.allowAttachSelf</argLine>

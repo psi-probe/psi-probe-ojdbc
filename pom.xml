@@ -84,7 +84,7 @@
     <properties>
         <!-- Dependencies -->
         <c3p0.version>0.9.5.5</c3p0.version>
-        <javabean-tester.version>2.4.3</javabean-tester.version>
+        <javabean-tester.version>2.5.0</javabean-tester.version>
         <jmockit.version>1.49.4</jmockit.version>
         <junit.version>5.9.1</junit.version>
         <ojdbc.version>19.17.0.0</ojdbc.version>

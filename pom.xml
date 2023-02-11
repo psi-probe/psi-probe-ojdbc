@@ -87,7 +87,7 @@
         <javabean-tester.version>2.5.0</javabean-tester.version>
         <jmockit.version>1.49.4</jmockit.version>
         <junit.version>5.9.2</junit.version>
-        <ojdbc.version>19.17.0.0</ojdbc.version>
+        <ojdbc.version>19.18.0.0</ojdbc.version>
         <servlet.version>4.0.4</servlet.version>
         <ucp.version>19.17.0.0</ucp.version>
 

@@ -11,3 +11,7 @@
 
 This side project for psi probe was made originally due to license restrictions with Oracle.  Those restrictions are long since gone.  For time being this repo is still being used by will eventually be
 re-introduced back into psi probe directly.
+
+## NOTICE 5/21/2023 ##
+
+Code has been moved back to https://github.com/psi-probe/psi-probe
